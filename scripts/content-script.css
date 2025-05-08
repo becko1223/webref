@@ -1,0 +1,74 @@
+@keyframes flash-message-fade {
+    0% {
+      display: inline;
+      opacity: 0;
+      transform: scaleX(0);
+      background-color :rgb(204, 240, 204);
+    }
+    10% { opacity: 0.5; }
+    20% { opacity: 1; transform: scale(1,1) }
+    90% { opacity: 1; transform: scale(1,1); }
+    100% {
+      opacity: 0;
+      transform: scaleY(0);
+      display: none;
+      background-color:rgb(255, 250, 244);
+    }
+  }
+
+
+
+  
+  .flash-message {
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    top: 0;
+    padding-top: 1%;
+
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  }
+
+
+
+  .addbutton {
+    display: none;
+    position: fixed;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    background-color: #fff;
+    border: 1px solid #98c1af;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    z-index: 1000;
+    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .addbutton:hover{
+    background-color: aquamarine;
+    border:#2d473c
+
+  }
+  
+  .addbutton.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

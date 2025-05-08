@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja" >
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebRef</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     
+     <link rel="stylesheet" href="boardpage.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/>
+     <script src="pickr.min.js"></script>
+     <script src="boardpage.js"></script>
+  </head>
+  <body style="margin: 10px; background-color:ghostwhite;">
+
+    <div id="myModal" class="modal">
+      <canvas id="can" style="display: none;"></canvas>
+      <button id="right" title="次の画像" class="modalbutton modalrightbutton btn btn-secondary"><i class="bi bi-chevron-double-right"></i></button>
+      <button id="left" ttle="前の画像" class="modalbutton modalleftbutton btn btn-secondary"><i class="bi bi-chevron-double-left"></i></button>
+      <button id="trash" title="削除" class="modalbutton modaltrashbutton btn btn-secondary"><i class="bi bi-trash-fill"></i></button>
+      <button id="download" title="ダウンロード" class="modalbutton modaldownloadbutton btn btn-secondary"><i class="bi bi-download"></i></button>
+      <!--<input type="color" id="head" class="modalbutton modalcolorpickbutton" value="#e66465" /> -->
+      <button id="colorpick" title="色スポイト" data-bs-toggle="button" class="modalbutton modalcolorpickbutton btn btn-secondary"></button>
+      <button id="picker" class="modalbutton modalcolorpanelbutton" style="background-color: aliceblue;border-color: dimgrey; width: 30px; height: 30px;"></div>
+
+      <!-- <button id="colorpanel" class="modalbutton modalcolorpanelbutton btn btn-secondary">パネル</button> -->
+
+    </div>
+
+    <div class="barmenu">
+    <ul class="nav nav-tabs  backwhite fixed" style="width: 100%; left: 10px ;top:10px;">
+        
+        <li class="nav-item">
+          <button class="nav-link active " data-bs-toggle="tab" data-bs-target="#list" type="button">資料一覧</button>
+        </li>
+        <li class="nav-item ">
+          <button class="nav-link " data-bs-toggle="tab" data-bs-target="#description" type="button">使い方</button>
+        </li>
+    </ul>
+    </div>
+    
+
+
+
+
+
+    <div class="tab-content">
+
+        
+      
+
+
+        <div class="tab-pane fade show active" id="list">
+          <div class="listmenu backwhite" >
+            <button id="multiple"  class="btn btn-light" data-bs-toggle="button" aria-pressed="false" autocomplete="off">複数選択</button>
+            <button id="allselect" class="btn btn-light" style="display:none">一括選択</button>
+            <button id="selectdownload" title="選択画像をダウンロード" class="btn btn-light" style="display:none"><i class="bi bi-download"></i></button>
+            <button id="selecttrash" title="選択画像を削除" class="btn btn-light" style="display:none"><i class="bi bi-trash-fill"></i></button>
+            <button id="export" class="btn btn-light">エクスポート</button>
+            <button id="import" class="btn btn-light">インポート</button>
+          </div>
+            
+            <div id="imagelist"   style="margin-top: 120px;" >
+              <div class="wrap" id="row" >
+                
+              </div>
+
+            </div>
+
+   
+        </div>
+        <div class="tab-pane fade" id="description">
+          <div class="listmenu backwhite" style="font-size: xx-large; font-weight: bolder; color:rgb(77, 89, 100)">
+            &nbsp;WebRef
+          </div>
+          <div id="contentframe">
+            WebRefは、Web上の好きな画像やyoutube動画を一つのタブ上にまとめ、参考資料として気軽に整理できるChrome拡張機能です。
+            <h3 style="margin-top: 50px;">資料の追加</h3>
+            好きなWebサイト上の好きな画像を右クリックします。そうすることで出てくるボタンをクリックするか、表示されるメニューの下部にある「WebRefに追加」をクリックすることで資料を追加することができます。(サイトによっては資料化できない画像もございますのでご留意ください。)<br>
+              <img id="add1" class="description" ><br>
+          
+
+            youtube動画を資料に追加する際は、youtubeサイトで再生中の動画を右クリックして、画像のときと同様現れたボタンをクリックするか「WebRefに追加」をクリックしてください。<br>
+            <img id="add2" class="description" /><br>
+            <h3 style="margin-top: 50px;">資料の閲覧</h3>
+            資料一覧のタブを開くには、ブラウザ右上の拡張機能のエリアでWebRefのアイコンをクリックしてください。<br>
+            <img id="view1" class="description"/><br>
+            資料閲覧用のタブが開かれます。<br>
+            <img id="view2" class="description"/><br>
+            表示されている資料画像をクリックすると、拡大閲覧画面が表示されます。資料をじっくり見たり、色をスポイトしたり、ダウンロードや削除を行ったりすることができます。<br>
+            <img id="view3" class="description"/><br>
+            youtube動画は埋め込まれており、このタブ上で再生できます。<br>
+            <img id="view4" class="description"/><br>
+            <h3 style="margin-top: 50px;">資料の操作</h3>
+            表示されている画像はドラッグアンドドロップによって並び替えることが可能です。（並び順は保持されるので、リロードしたりタブを作り直しても支障はありません）<br>
+            <img id="manipulate1" class="description"/><br>
+            <img id="manipulate2" class="description"/><br>
+            複数選択ボタンを押すことで複数選択できるようになります。複数選択した画像はまとめてダウンロードしたり消去したりすることが可能です<br>
+            <img id="manipulate3" class="description"/><br>
+            エクスポートボタンを押すことで、資料の情報を書き出すことができ、インポートボタンを押すことで書き出された資料を読み込むことができます。<br>
+            <h3 style="margin-top: 50px;">最後に</h3>
+            最低限の機能で良いからめちゃくちゃ気軽にWeb上の参考画像をまとめられるように出来たらいいなと思って作ってみました。もし誰かの役にも立てたならとても幸いです。<br>
+            <p style="font-size: small;">(※WebRef操作の説明に用いたイラストは東方Projectの二次創作作品です。)</p>
+
+
+
+
+
+
+        
+
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>

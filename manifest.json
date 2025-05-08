@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "WebRef:Reference image manager",
+    "description": "WebRefは、Web上の好きな画像やyoutube動画を一つのタブ上にまとめ、参考資料として気軽に整理できるChrome拡張機能です。",
+    "version": "1.0.2",
+    "content_security_policy": {"extention_pages":"script-src 'self' ; object-src 'self';"},
+    "permissions": [
+        "storage",
+        "background",
+        "contextMenus"
+    ],
+    "icons": {
+    "128":"icons/webref128.png"
+       
+    },
+
+    "content_scripts": [
+		{
+			"matches": ["*://*/*" ],
+			"run_at": "document_end",
+			"js": ["scripts/content-script.js"],
+            "css":["scripts/content-script.css"]
+		}
+    ],
+    
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources":  [{
+        "resources" : [ "boardpage/*" ],
+        "matches" : [ "*://*/*" ]
+    },
+    {
+        "resources": ["icons/*"],
+        "matches": ["<all_urls>"]
+    }],
+    "action":{
+    
+    }
+  
+}

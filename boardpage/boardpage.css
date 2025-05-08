@@ -1,0 +1,226 @@
+
+
+ body{
+  min-height: 600px;
+ }
+
+
+ .description{
+  width:500px;
+  height:auto;
+  margin-bottom: 50px;
+ }
+
+ #contentframe{
+  width:800px;
+  margin-top:130px;
+  margin-right: 50px;
+  margin-left:50px;
+  margin-bottom: 100px;
+  line-height: 1.7;
+
+ }
+  
+  /* モーダルウィンドウの基本スタイル */
+  .modal {
+    display: none; /* デフォルトでは非表示に設定 */
+    position: fixed; /* モーダルがページ全体に固定されるように設定 */
+    top: 0; /* ページの最上部からスタート */
+    left: 0; /* ページの最左端からスタート */
+    width: 100%; /* モーダルが画面全体の幅を占める */
+    height: 100%; /* モーダルが画面全体の高さを占める */
+    background-color: rgba(0, 0, 0, 0.4); /* 背景を半透明の黒に設定（モーダルの背後が見えるように） */
+    overflow: scroll;
+    text-align:center;
+    
+  }
+
+  .modal.active{
+    display: block;
+    animation-name: fadeIn;
+    animation-fill-mode:forwards;
+    animation-duration:0.5s;
+  }
+
+
+  @keyframes fadeIn{
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+  
+  .modalimage {
+    
+    /* left: 50%; /* 横方向の中央に配置 */
+    /* transform: translate(50%, 0); /* 完全に中央に配置するための補正 */
+    vertical-align: middle;
+    
+    padding: 20px; /* モーダル内の余白を設定 */
+    min-width: 40%;
+    max-width: 70%; /* モーダルの幅 */
+    height:auto;
+    
+    
+    
+  }
+
+  .square{
+    position:fixed;
+    width:16px;
+    height:16px;
+    background-color: transparent;
+    border: solid 1px rgb(0, 0, 0);    
+    box-shadow: 0 0 0 1px #ffffff; 
+  }
+
+  .modalrightbutton{
+    position: fixed;
+    top: 45%;
+    right:5%;
+  }
+
+  .modalleftbutton{
+    position: fixed;
+    top: 45%;
+    left:3%;
+  }
+
+  .modaltrashbutton{
+    position: fixed;
+    top: 4%;
+    right:5%;
+  }
+
+  .modaldownloadbutton{
+    position: fixed;
+    top:4%;
+    right:9%;
+  }
+
+  .modalcolorpickbutton{
+    position:fixed;
+    top: 4%;
+    right:13%;
+    padding: 4px;
+    width:41.33px;
+    height:37.33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .modalcolorpickbutton.active{
+    border: 1px solid aqua;
+    background-color: darkcyan;
+    }
+    
+
+  
+
+  .modalcolorpanelbutton{
+    position:fixed;
+    top: 12%;
+    right:5%;
+    border-color: transparent;
+  }
+
+
+
+  .flash-message {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    top: 0;
+    padding-top: 1%;
+
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  }
+
+  @keyframes flash-message-fade {
+    0% {
+      display: inline;
+      opacity: 0;
+      transform: scaleX(0);
+      background-color :rgb(204, 240, 204);
+    }
+    10% { opacity: 0.5; }
+    20% { opacity: 1; transform: scale(1,1) }
+    90% { opacity: 1; transform: scale(1,1); }
+    100% {
+      opacity: 0;
+      transform: scaleY(0);
+      display: none;
+      background-color:rgb(255, 250, 244);
+    }
+  }
+
+
+
+  .backwhite{
+    background-color: white;
+  }
+
+  .fixed{
+    position: fixed;
+  }
+
+  .barmenu{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100px;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .listmenu{
+    position: fixed;
+    display: flex;
+    left:0;
+    height: 50px;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    top: 10%;
+    z-index: 1;
+  }
+
+ 
+  .wrap {
+    
+    display: grid;
+    width:1500px;
+    grid-template-columns: repeat(5,250px);
+    column-gap: 1px;
+    row-gap: 5px;
+    
+  }
+
+  .nav-link{
+    color:#222;
+  }
+
+  .nav-tabs .nav-link.active{
+    font-weight: bold;
+  }
