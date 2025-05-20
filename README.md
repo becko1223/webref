@@ -1,0 +1,4 @@
+# サービス概要
+インストール場所：https://chromewebstore.google.com/detail/webrefreference-image-man/nomdghdcaojopmphfngdddnajfnnlgbp?hl=ja&utm_source=ext_sidebar  
+  
+このプロダクトは、絵を描く際、Web上の参考資料を使いやすく整理したい絵描き向けに作られたChrome拡張機能です。ユーザーは、任意のWebサイト上の任意の画像やyoutubeサイト上のyoutube動画を右クリックによって自分の資料一覧に追加することができ、追加された資料を、拡張機能の専用タブの中でまとめて閲覧、整理することができます。こうすることで、サイト内を行き来したり、サイトを調べなおしたり、複数のタブをまたいだりといった面倒な作業を伴うことなく資料を閲覧、整理していくことが可能になります
