@@ -25,5 +25,24 @@
 
 # 操作方法
 - 任意のサイト上の任意の画像に対し、右クリックを押すと資料追加用のボタンが表示されるので、そのボタンを押すことで資料を追加することができます。
+
+<img src="https://github.com/user-attachments/assets/6880eecf-f315-4978-b01e-f61a65c9a20e" width="400">
+<br>
+<br>
+<img src="https://github.com/user-attachments/assets/5684e8ba-8674-4e53-b81b-011c04f8b48a" width="400">
+<br>
+<br>
+<br>
+
 - ブラウザ右上から拡張機能のアイコンをクリックすることで資料一覧のページを開くことができます
-- 
+<img src="https://github.com/user-attachments/assets/7338d9e7-190a-49f4-baae-d66a42fb5d97" width="400">
+<br>
+<br>
+<img src="https://github.com/user-attachments/assets/621c2546-6845-4c90-a676-c24ad247a16c" width="400">
+<br>
+<br>
+<br>
+
+- 資料一覧のページでは、資料を大きく表示させたり、色スポイトをしたり、資料をダウンロードしたり、資料を並び替えたり、資料全体の情報を書き出したり読み込んだりすることができます。
+<img src="https://github.com/user-attachments/assets/d4321b82-7b33-4332-8194-fbfa47452a5e" width="400">
+
