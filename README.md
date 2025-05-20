@@ -1,7 +1,5 @@
-<img src="https://github.com/user-attachments/assets/bb7bdf18-f23d-49bb-8e80-ae17ce235b67" width="600">
-<br>
-<br>
-インストールurl：https://chromewebstore.google.com/detail/webrefreference-image-man/nomdghdcaojopmphfngdddnajfnnlgbp?hl=ja&utm_source=ext_sidebar
+# インストールURL
+https://chromewebstore.google.com/detail/webrefreference-image-man/nomdghdcaojopmphfngdddnajfnnlgbp?hl=ja&utm_source=ext_sidebar
 <br>
 <br>
 
@@ -43,6 +41,10 @@
 <br>
 <br>
 
-- 資料一覧のページでは、資料を大きく表示させたり、色スポイトをしたり、資料をダウンロードしたり、資料を並び替えたり、資料全体の情報を書き出したり読み込んだりすることができます。
+- 資料一覧のページでは、資料を大きく表示させたり、色スポイトをしたり、資料をダウンロードしたり、資料を並び替えたり、資料全体の情報を書き出したり読み込んだりすることなどができます。
 <img src="https://github.com/user-attachments/assets/d4321b82-7b33-4332-8194-fbfa47452a5e" width="400">
+
+<br>
+<br>
+
 
